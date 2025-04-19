@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: springboot-h2-app
+    env: java
+    plan: free
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/sb-ecom-0.0.1-SNAPSHOT.jar
+    autoDeploy: true
